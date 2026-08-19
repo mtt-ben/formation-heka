@@ -1,0 +1,15 @@
+services:
+  ros2_desktop:
+    image: tiryoh/ros2-desktop-vnc:humble
+    container_name: ros2_humble_desktop
+    # Requis pour Ubuntu 22.04 (voir Tiryoh/docker-ros2-desktop-vnc#56)
+    security_opt:
+      - seccomp:unconfined
+    shm_size: "512m"
+    restart: unless-stopped
+    ports:
+      - "6080:80"   # interface web -> http://localhost:6080
+    volumes:
+      # Le dossier ros2_ws reste sur la machine de l'étudiant,
+      # meme si le conteneur est supprime (docker compose down / docker rm).
+      - ./ros2_ws:/home/ubuntu/ros2_ws

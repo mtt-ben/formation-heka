@@ -1,0 +1,75 @@
+/*
+ * commander_node.cpp
+ *
+ * Node "cerveau" du projet : calcule la commande de deplacement de la tortue
+ * et la publie sur /trajectory_cmd. Le node "turtle_executor" (Python) se
+ * charge de transformer cette commande en Twist pour turtlesim.
+ */
+
+#include <chrono>
+#include <memory>
+
+#include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/bool.hpp"
+#include "trajectory_interfaces/msg/trajectory_command.hpp"
+
+using namespace std::chrono_literals;
+
+class CommanderNode : public rclcpp::Node
+{
+public:
+  CommanderNode()
+  : Node("commander_node")
+  {
+
+    // Un noeud externe pour publier sur /obstacle_alert afin de simuler la detection d'un obstacle.
+    //
+    // obstacle_subscription_ = this->create_subscription<std_msgs::msg::Bool>(
+    //   "/obstacle_alert", 10,
+    //   std::bind(&CommanderNode::obstacle_callback, this, std::placeholders::_1));
+
+    RCLCPP_INFO(this->get_logger(), "commander_node demarre.");
+  }
+
+private:
+
+  // -----------------------------------------------------------------
+  // TODO 1 : Implementer une trajectoire non triviale.
+  //
+  // Objectif : faire dessiner a la tortue une trajectoire definie
+  // (par exemple un carre, un cercle, ou une suite de points).
+  //
+  // Suggestion d'approche pour un carre :
+  //   - definir un etat interne (ex: enum { AVANCE, TOURNE })
+  //   - avancer pendant N secondes, puis tourner de 90 degres,
+  //     puis repeter
+  //   - vous aurez besoin d'un ou plusieurs membres prives pour
+  //     suivre le temps ecoule / l'etat courant (voir section
+  //     "membres prives" plus bas)
+  //
+  // Pour l'instant, ce squelette avance tout droit en continu.
+  // C'est a vous de le faire evoluer.
+  // -----------------------------------------------------------------
+
+  // -----------------------------------------------------------------
+  // TODO 2 : Reagir a la detection d'un obstacle.
+  //
+  // La variable obstacle_detected_ est mise a jour automatiquement
+  // par obstacle_callback() ci-dessus des qu'un message arrive sur
+  // /obstacle_alert (testable avec :
+  //   ros2 topic pub /obstacle_alert std_msgs/msg/Bool "{data: true}"
+  // ).
+  //
+  // A vous de decider ce que la tortue doit faire quand un obstacle
+  // est detecte (s'arreter ? reculer ? tourner ?), et de l'implementer
+  // ici. Pensez a mettre message.avoid_obstacle a jour en consequence.
+  // -----------------------------------------------------------------
+};
+
+int main(int argc, char * argv[])
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<CommanderNode>());
+  rclcpp::shutdown();
+  return 0;
+}
