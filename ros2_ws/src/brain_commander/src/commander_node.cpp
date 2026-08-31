@@ -24,9 +24,9 @@ public:
 
     // Un noeud externe pour publier sur /obstacle_alert afin de simuler la detection d'un obstacle.
     //
-    // obstacle_subscription_ = this->create_subscription<std_msgs::msg::Bool>(
-    //   "/obstacle_alert", 10,
-    //   std::bind(&CommanderNode::obstacle_callback, this, std::placeholders::_1));
+    obstacle_subscription_ = this->create_subscription<std_msgs::msg::Bool>(
+    "/obstacle_alert", 10,
+    std::bind(&CommanderNode::obstacle_callback, this, std::placeholders::_1));
 
     RCLCPP_INFO(this->get_logger(), "commander_node demarre.");
   }
