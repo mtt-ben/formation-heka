@@ -35,11 +35,12 @@ sudo apt update
 sudo apt install -y git
 ```
 
-## 4. Cloner le dépôt du projet
+## 4. Cloner le dépôt du projet puis créer votre branche
 
 À l'endroit où vous voulez ranger le projet :
 ```bash
-git clone <URL_DU_REPO>
+git clone https://github.com/mtt-ben/formation-heka.git
+git branch <votre_nom>
 cd ROS2_env
 ```
 

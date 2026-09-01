@@ -44,11 +44,12 @@ git --version
 ```
 Si la commande n'est pas reconnue, installez Git depuis [git-scm.com/download/win](https://git-scm.com/download/win) (double-clic sur l'installateur, cliquer "Next" jusqu'au bout — installation par défaut, pas de terminal requis).
 
-## 5. Cloner le dépôt du projet
+## 5. Cloner le dépôt du projet puis créer votre propre branche
 
 **[Dans PowerShell]**, à l'endroit où vous voulez ranger le projet :
 ```powershell
-git clone <URL_DU_REPO>
+git clone https://github.com/mtt-ben/formation-heka.git
+git branch <votre_nom>
 cd ROS2_env
 ```
 

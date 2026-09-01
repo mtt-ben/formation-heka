@@ -27,11 +27,12 @@ git --version
 ```
 Si Git n'est pas installé, macOS proposera automatiquement de l'installer via les outils en ligne de commande Xcode — acceptez l'installation.
 
-## 4. Cloner le dépôt du projet
+## 4. Cloner le dépôt du projet puis créer votre branche
 
 **[Dans le Terminal]**, à l'endroit où vous voulez ranger le projet :
 ```bash
-git clone <URL_DU_REPO>
+git clone https://github.com/mtt-ben/formation-heka.git
+git branch <votre_nom>
 cd ROS2_env
 ```
 
