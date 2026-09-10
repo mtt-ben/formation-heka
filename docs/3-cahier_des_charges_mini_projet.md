@@ -11,13 +11,7 @@ Il ne s'agit pas d'un projet parfait ni complet : ce qui compte est votre démar
 
 ---
 
-## 2. Durée
-
-**à compléter**
-
----
-
-## 3. Prérequis avant de commencer
+## 2. Prérequis avant de commencer
 
 Avant de démarrer le mini-projet, vous devez avoir parcouru au minimum :
 - Python : bases (variables, fonctions, boucles, classes) — [w3schools.com/python](https://www.w3schools.com/python/default.asp)
@@ -28,7 +22,7 @@ Avant de démarrer le mini-projet, vous devez avoir parcouru au minimum :
 
 Franchement quasi tout est faisable sans, essayez par vous même avant.
 
-L'utilisation d'outils d'IA (ChatGPT, Copilot, Claude, etc.) est **autorisée** pour vous aider à écrire votre code. Cependant, **vous devez être capable d'expliquer chaque partie de votre code lors de l'entretien 1-on-1**. Un code que vous ne comprenez pas ne vous aidera pas à être sélectionné, même s'il fonctionne.
+L'utilisation d'outils d'IA (ChatGPT, Copilot, Claude, etc.) est **autorisée** pour vous aider à écrire votre code. Cependant, **vous devez être capable d'expliquer la majorité de votre code lors d'un entretien 1-on-1**.
 
 ---
 

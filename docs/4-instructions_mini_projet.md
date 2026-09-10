@@ -91,5 +91,4 @@ ros2 topic echo /trajectory_cmd
 
 Voir le cahier des charges pour le détail complet, mais pour rappel :
 - Dépôt Git personnel avec **plus d'un commit**, échelonnés dans le temps
-- Un `README.md` expliquant vite fait ce que fait le code, vous pouvez virer le mien
 - Vous devez être capable d'expliquer chaque partie de votre code en entretien, même si vous avez utilisé de l'IA pour vous aider à l'écrire

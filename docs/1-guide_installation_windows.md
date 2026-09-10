@@ -46,7 +46,7 @@ Si la commande n'est pas reconnue, installez Git depuis [git-scm.com/download/wi
 
 ## 5. Cloner le dépôt du projet puis créer votre propre branche
 
-**[Dans PowerShell]**, à l'endroit où vous voulez ranger le projet :
+**[Dans PowerShell]**, à l'endroit où vous voulez ranger le projet (allez dans votre dossier puis clic droit puis "open in terminal") :
 ```powershell
 git clone https://github.com/mtt-ben/formation-heka.git
 git branch <votre_nom>

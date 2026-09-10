@@ -27,23 +27,7 @@ Ouvrez votre navigateur à l'adresse : **http://localhost:6080**
 
 ---
 
-## Étape 2 — Récupérer le package de test
-
-Dans le bureau virtuel, ouvrez un terminal, puis :
-
-```bash
-whoami
-```
-✅ Notez le nom affiché (normalement `ubuntu`) — c'est votre nom d'utilisateur dans le conteneur.
-
-Placez le dossier `env_check` (fourni séparément) dans `~/ros2_ws/src/`, de façon à obtenir :
-```
-~/ros2_ws/src/env_check/
-```
-
----
-
-## Étape 3 — Compiler le package
+## Étape 2 — Compiler le package
 
 ```bash
 cd ~/ros2_ws
@@ -58,7 +42,7 @@ source install/setup.bash
 
 ---
 
-## Étape 4 — Lancer turtlesim
+## Étape 3 — Lancer turtlesim
 
 Dans **ce même terminal** (ou un nouveau, mais il faudra re-sourcer ROS2 avec `source /opt/ros/humble/setup.bash`) :
 
@@ -71,7 +55,7 @@ ros2 run turtlesim turtlesim_node
 
 ---
 
-## Étape 5 — Lancer le node de test
+## Étape 4 — Lancer le node de test
 
 Ouvrez un **nouveau terminal** dans le bureau virtuel :
 
@@ -88,7 +72,7 @@ Arrêtez avec `Ctrl+C`.
 
 ---
 
-## Étape 6 — Vérifier la communication entre nodes
+## Étape 5 — Vérifier la communication entre nodes
 
 Pendant que `circle_mover` tourne (relancez-le si besoin), ouvrez un **troisième terminal** :
 
@@ -105,7 +89,7 @@ ros2 topic echo /turtle1/cmd_vel
 
 ---
 
-## Étape 7 — Vérifier Git
+## Étape 6 — Vérifier Git
 
 ```bash
 git --version
