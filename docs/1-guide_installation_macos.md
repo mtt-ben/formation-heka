@@ -32,9 +32,10 @@ Si Git n'est pas installé, macOS proposera automatiquement de l'installer via l
 **[Dans le Terminal]**, à l'endroit où vous voulez ranger le projet :
 ```bash
 git clone https://github.com/mtt-ben/formation-heka.git
+cd formation-heka
 git branch <votre_nom>
-cd ROS2_env
 ```
+Remplacez l'entiereté de <votre nom> (ex : git branch matthias)
 
 ## 5. Lancer l'environnement
 

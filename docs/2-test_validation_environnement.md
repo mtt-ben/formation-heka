@@ -24,6 +24,7 @@ docker compose up -d
 Ouvrez votre navigateur à l'adresse : **http://localhost:6080**
 
 ✅ Un bureau Ubuntu doit s'afficher.
+Si vous avez des difficultés à faire CTRL-C, CTRL-V : vérifiez les paneaux qui s'ouvre à gauche du bureau (petite fleche au milieu à gauche)
 
 ---
 

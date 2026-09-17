@@ -12,15 +12,13 @@ Docker Desktop a besoin de WSL2 comme moteur sous-jacent sur Windows.
 ```powershell
 wsl --install
 ```
-Redémarrez l'ordinateur si demandé.
+Redémarrez l'ordinateur.
 
 > Si WSL est déjà installé, assurez-vous qu'il est en version 2 :
 > **[PowerShell]**
 > ```powershell
 > wsl --set-default-version 2
 > ```
-
-⚠️ **Point important :** au tout premier démarrage après l'installation, Windows va **automatiquement ouvrir une fenêtre "Ubuntu"** et vous demander de créer un nom d'utilisateur et un mot de passe pour cette distribution Linux. C'est normal, faites-le — mais c'est la **seule et unique fois** où vous interagissez avec ce terminal Ubuntu. Il sert uniquement de moteur interne à Docker Desktop. **Toutes les commandes du reste de ce guide se tapent dans PowerShell, jamais dans cette fenêtre Ubuntu.**
 
 ## 3. Installer Docker Desktop
 
@@ -43,15 +41,17 @@ Si un message de bienvenue s'affiche, Docker fonctionne correctement.
 git --version
 ```
 Si la commande n'est pas reconnue, installez Git depuis [git-scm.com/download/win](https://git-scm.com/download/win) (double-clic sur l'installateur, cliquer "Next" jusqu'au bout — installation par défaut, pas de terminal requis).
+Relancez le terminal une fois l'installation de git finie.
 
 ## 5. Cloner le dépôt du projet puis créer votre propre branche
 
 **[Dans PowerShell]**, à l'endroit où vous voulez ranger le projet (allez dans votre dossier puis clic droit puis "open in terminal") :
 ```powershell
 git clone https://github.com/mtt-ben/formation-heka.git
+cd formation-heka
 git branch <votre_nom>
-cd ROS2_env
 ```
+Remplacez l'entiereté de <votre nom> (ex : git branch matthias)
 
 ## 6. Lancer l'environnement
 

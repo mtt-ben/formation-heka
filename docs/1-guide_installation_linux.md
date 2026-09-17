@@ -40,8 +40,8 @@ sudo apt install -y git
 À l'endroit où vous voulez ranger le projet :
 ```bash
 git clone https://github.com/mtt-ben/formation-heka.git
+cd formation-heka
 git branch <votre_nom>
-cd ROS2_env
 ```
 
 ## 5. Lancer l'environnement
